@@ -26,19 +26,5 @@ public class Main {
 
     Player player = new Player();
 
-    // テストコード
-    if (player != null) {
-      System.out.println("Playerオブジェクトが正しくインスタンス化されました。");
-  } else {
-      System.out.println("Playerオブジェクトのインスタンス化に失敗しました。");
-  }
-
-  // correctQuizNumが初期値0であることを確認
-  if (player.getCorrectQuizNum() == 0) {
-      System.out.println("correctQuizNumの初期値は0です。");
-  } else {
-      System.out.println("correctQuizNumの初期値が0ではありません。");
-  }
-
   }
 }
