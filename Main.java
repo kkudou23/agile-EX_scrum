@@ -7,12 +7,6 @@ public class Main {
 
 // 以前のスプリントで誤って配列を作成しました
 
-    List<Choice> q1Choices = new ArrayList<Choice>();
-    q1Choices.add(new Choice(1, "食パン"));
-    q1Choices.add(new Choice(2, "あんパン"));
-    q1Choices.add(new Choice(3, "フライパン"));
-    quizzes.add(new Quiz(1, "パンはパンでも食べられないパンは?", q1Choices, 3));
-
         List<Choice> q1Choices = new ArrayList<Choice>();
         q1Choices.add(new Choice(1, "食パン"));
         q1Choices.add(new Choice(2, "あんパン"));
