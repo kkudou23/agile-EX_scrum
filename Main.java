@@ -27,14 +27,9 @@ public class Main {
         quizzes.add(new Quiz(3, "最初の東京オリンピックは何年?", q3Choices, 3));
      
         Player player = new Player();
-
-    // showQuizメソッドを作る
-
-    Player player = new Player();
       
-      
-    for (Quiz quiz : quizzes) {
-        quiz.showQuiz();
-       }
+        for (Quiz quiz : quizzes) {
+            quiz.showQuiz();
+        }
    }
 }
