@@ -20,4 +20,8 @@ public class Quiz {
         }
         System.out.print("こたえを入力してください>");
     }
+
+    public boolean isCorrect(int givenAnswer) {
+        return givenAnswer == this.answer;
+    }
 }
