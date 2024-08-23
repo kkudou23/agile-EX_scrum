@@ -1,5 +1,5 @@
 import java.util.*;
-// import java.io.*;
+import java.io.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -22,7 +22,9 @@ public class Main {
         q3Choices.add(new Choice(2, "1940年"));
         q3Choices.add(new Choice(3, "1964年"));
         quizzes.add(new Quiz(3, "最初の東京オリンピックは何年?", q3Choices, 3));
-        
+     
+        Player player = new Player();
+
         for (Quiz quiz : quizzes) {
             quiz.showQuiz();
         }
