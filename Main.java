@@ -25,11 +25,42 @@ public class Main {
         q3Choices.add(new Choice(2, "1940年"));
         q3Choices.add(new Choice(3, "1964年"));
         quizzes.add(new Quiz(3, "最初の東京オリンピックは何年?", q3Choices, 3));
-     
+
         Player player = new Player();
-      
+
         for (Quiz quiz : quizzes) {
             quiz.showQuiz();
+
+            String input = null;
+            try {
+                BufferedReader inputuser = new BufferedReader(
+                        new InputStreamReader(System.in)
+                );
+                input = inputuser.readLine();
+            } catch (IOException e) {
+                System.out.print("システムエラー");
+                System.exit(0);
+                return;
+            }
+
+            int inputInt = 0;
+            try {
+                inputInt = Integer.parseInt(input);
+            } catch (NumberFormatException e) {
+                System.out.println("1-3の数字を入力してください。");
+                System.exit(0);
+                return;
+            }
+
+            if (inputInt > 3 || inputInt < 1) {
+                System.out.println("1-3の数字を入力してください。");
+                System.exit(0);
+                return;
+            }
+
+            if (quiz.isCorrect(inputInt)) {
+                player.setCorrectQuizNum(player.getCorrectQuizNum() + 1);
+            }
         }
-   }
+    }
 }
