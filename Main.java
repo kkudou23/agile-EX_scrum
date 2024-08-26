@@ -62,5 +62,7 @@ public class Main {
                 player.setCorrectQuizNum(player.getCorrectQuizNum() + 1);
             }
         }
+        System.out.println("[結果]");
+        player.showCorrectQuizNum();
     }
 }
